@@ -1,0 +1,59 @@
+// =================================================
+// mixin / media
+// =================================================
+
+//先針對media queries的width設為變數
+$desktop-media:      1025px
+$tablet-l-media:     1024px
+$tablet-l-end-media: 769px
+$tablet-m-media:     768px
+$tablet-m-end-media: 480px
+$mobile-l-media:     479px
+$mobile-l-end-media: 376px
+$mobile-m-media:     375px
+$mobile-m-end-media: 321px
+$mobile-s-media:     320px
+
+/*把變數帶入mixin中，此mixin只就單純把media queries寫到我的mixin中，
+ *並且使用我上面設立的變數來調動media queries的width
+//電腦
+=desktop
+  @media all and (min-width: $desktop-media)
+    @content
+
+=non-desktop
+  @media all and (max-width: $tablet-l-media)
+    @content
+
+=tablet
+  @media all and (min-width: $tablet-m-end-media) and (max-width: $tablet-l-media)
+    @content
+
+=tablet-l
+  @media all and (min-width: $tablet-l-end-media) and (max-width: $tablet-l-media)
+    @content
+
+=tablet-m
+  @media all and (min-width: $tablet-m-end-media) and (max-width: $tablet-m-media)
+    @content
+
+=mobile
+  @media all and (max-width: $mobile-l-media)
+    @content
+
+=mobile-l
+  @media all and (min-width: $mobile-l-end-media) and (max-width: $mobile-l-media)
+    @content
+
+=mobile-m
+  @media all and (min-width: $mobile-m-end-media) and (max-width: $mobile-m-media)
+    @content
+
+=mobile-s
+  @media all and (max-width: $mobile-s-media)
+    @content
+
+
+// =================================================
+// End mixin
+// =================================================
